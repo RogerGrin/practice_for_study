@@ -1,10 +1,10 @@
 # рекурсивно
 def fibonacci(n):
-    if (n > 2):
+    if (n > 1):
         return fibonacci(n - 2) + fibonacci(n - 1)
-    elif (n == 2):
+    elif (n == 1):
         return 1
     else:
         return 0
     
-print(fibonacci(6))
+print(fibonacci(40))
