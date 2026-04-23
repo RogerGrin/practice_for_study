@@ -17,15 +17,11 @@ int binary_search(int* array, int n, int k) {
             upper_index = middle_index;
         }
         else if (k == array[middle_index]) {
-            result_index = middle_index;
-            break;
+            return middle_index;
         }
     }
     
-    if (result_index == -1) {
-        cout << "не найдено такого индекса" << endl;
-    }
-    return result_index;
+    return -1;
     
 }
 
@@ -42,8 +38,10 @@ int main()
 
     // для примера
     for (int i = 0; i < n; i++) {
-        array[i] = i + 2;
+        array[i] = i + 100;
     }
+
+    cout << "это изменения для проверки!" << endl;
 
     cout << binary_search(array, n, k) << endl;
 
